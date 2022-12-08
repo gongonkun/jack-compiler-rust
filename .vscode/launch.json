@@ -1,0 +1,83 @@
+{
+  // IntelliSense を使用して利用可能な属性を学べます。
+  // 既存の属性の説明をホバーして表示します。
+  // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'JackAnalyzer'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=JackAnalyzer",
+          "--package=jack-compiler-rust"
+        ],
+        "filter": {
+          "name": "JackAnalyzer",
+          "kind": "bin"
+        }
+      },
+      "args": ["../nand2tetris/projects/10/ArrayTest/Main.jack"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'JackAnalyzer'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=JackAnalyzer",
+          "--package=jack-compiler-rust"
+        ],
+        "filter": {
+          "name": "JackAnalyzer",
+          "kind": "bin"
+        }
+      },
+      "args": ["../nand2tetris/projects/10/ArrayTest/Main.jack"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'jack-compiler-rust'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=jack-compiler-rust",
+          "--package=jack-compiler-rust"
+        ],
+        "filter": {
+          "name": "jack-compiler-rust",
+          "kind": "bin"
+        }
+      },
+      "args": ["../nand2tetris/projects/10/ArrayTest/Main.jack"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'jack-compiler-rust'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=jack-compiler-rust",
+          "--package=jack-compiler-rust"
+        ],
+        "filter": {
+          "name": "jack-compiler-rust",
+          "kind": "bin"
+        }
+      },
+      "args": ["../nand2tetris/projects/10/ArrayTest/Main.jack"],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
